@@ -135,6 +135,10 @@ tags: [Notebooks/personal/editors/vim, vim]
 
 - [Newline used for NUL](#newline-used-for-nul)
 
+### [Terminology](#terminology-1)
+
+- [Vim script? Vimscript? VimL?](#vim-script-vimscript-viml)
+
 ### [List of colorschemes](PLUGINS.md#colorschemes-1)
 
 ### [List of plugins](PLUGINS.md)
@@ -749,17 +753,17 @@ See `:h text-objects` for all available text objects.
 
 ## Autocmds
 
-On many occasions, Vim emits events. You hook into these events by using
-autocmds.
+You can trigger an action after many events in Vim, such as a buffer being
+saved or Vim having started up, by so-called _autocmds_.
 
-You wouldn't use Vim if there weren't autocmds. They're used all the time, even
-if you don't notice it. Don't believe me? Check `:au`, but don't let the output
-overwhelm you. These are all the autocmds that are in effect right now!
+Vim relies extensively on autocmds. Don't believe me? Check `:au`, but don't let
+the output overwhelm you. These are all the autocmds that are in effect right
+now!
 
 See `:h {event}` for a quick overview of all available events and `:h
 autocmd-events-abc` for more details.
 
-A typical example would be setting filetype-specific settings:
+A typical example would be filetype-specific settings:
 
 ```vim
 autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 comments-=:#
@@ -2791,3 +2795,15 @@ NUL characters (`\0`) in a file, are stored as newline (`\n`) in memory and
 displayed in a buffer as `^@`.
 
 See `man 7 ascii` and `:h NL-used-for-Nul` for more information.
+
+# Terminology
+
+## Vim script? Vimscript? VimL?
+
+`Vim script`, `Vimscript`, and `VimL` all refer to the same thing: The
+programming language used for scripting Vim. Even though
+[8.0.360](https://github.com/vim/vim/commit/b544f3c81f1e6a50322855681ac266ffaa8e313c)
+changed all references to `VimL` to `Vim script`, which can now be considered
+the official term, `VimL` is still widespread all over the internet.
+
+No matter which term you use, everyone will understand it.
