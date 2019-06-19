@@ -1,3 +1,10 @@
+---
+title: README
+created: '2019-02-02T00:58:42.358Z'
+modified: '2019-03-31T01:04:21.986Z'
+tags: [Notebooks/personal/editors/vim, vim]
+---
+
 <div align='center'>
   <br /><br /><br />
   <img src='https://raw.githubusercontent.com/mhinz/vim-galore/master/static/images/logo-vim-galore.png' alt='vim-galore logo' />
@@ -2784,4 +2791,3 @@ NUL characters (`\0`) in a file, are stored as newline (`\n`) in memory and
 displayed in a buffer as `^@`.
 
 See `man 7 ascii` and `:h NL-used-for-Nul` for more information.
-
